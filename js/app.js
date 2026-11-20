@@ -149,9 +149,9 @@
       "<div><h3>" + esc(f.titulo) + (es ? '<span class="badge">¡la que viene!</span>' : "") + "</h3>" + (f.texto ? "<p>" + esc(f.texto) + "</p>" : "") + "</div></li>";
   }).join("") || "<li>Pronto agregaremos fechas ♡</li>");
 
-  /* ---------- 10. ¿qué es Chiru? ---------- */
+  /* ---------- 10. ¿qué es Chirú? ---------- */
   var Q = D.queEsChiru || {};
-  poner("chiru-contenido", '<h2 id="chiru-titulo">' + esc(Q.titulo || "¿Qué es Chiru?") + "</h2>" +
+  poner("chiru-contenido", '<h2 id="chiru-titulo">' + esc(Q.titulo || "¿Qué es Chirú?") + "</h2>" +
     (Q.intro ? '<p class="chiru-intro">' + esc(Q.intro) + "</p>" : "") +
     '<div class="chiru-puntos">' + (Q.puntos || []).map(function (p) {
       return '<div class="chiru-punto"><h3>' + esc(p.titulo) + "</h3><p>" + esc(p.texto) + "</p></div>";

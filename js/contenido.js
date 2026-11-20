@@ -19,7 +19,7 @@ window.CHIRU = {
     titulo: "Chirunation",
     subtitulo: "Celebrando los lazos entre Perú y Chile ♡",
     bienvenida: "¡Bienvenidx a la Chirunation! ♡",          // texto que pasa en la cinta de arriba
-    pie: "Hecho con amor chiruano ♡ fan site sin fines de lucro",
+    pie: "Fan site sin fines de lucro ♡ hecho con amor chiruano",
   },
 
   // Botón de la barra de arriba (a la derecha de la cinta).
@@ -29,12 +29,12 @@ window.CHIRU = {
 
   /* ---------- 2. LAS 3 BURBUJAS SOBRE EL PLANETA ---------- */
   // abre: "calendario"  → abre la ventanita del calendario
-  // abre: "chiru"       → abre la ventanita de ¿Qué es Chiru?
+  // abre: "chiru"       → abre la ventanita de ¿Qué es Chirú?
   // link: "https://..."  → abre ese link en otra pestaña
   // icono disponible: calendario, corazon, slides, libro, estrella, musica, video
   burbujas: [
     { texto: "Calendario",     icono: "calendario", abre: "calendario" },
-    { texto: "¿Qué es Chiru?", icono: "corazon",    abre: "chiru" },
+    { texto: "¿Qué es Chirú?", icono: "corazon",    abre: "chiru" },
     { texto: "CC2025",         icono: "slides",     link: "https://drive.google.com/file/d/1cwRm8RrBGzPfCTTBt_qsNaXQ2iZcNwIi/view?usp=sharing", detalle: "slides" },
   ],
 
@@ -45,7 +45,7 @@ window.CHIRU = {
   concursos: {
     etiqueta: "Nuevo aviso",
     titulo: "¡Participa en los concursos!",
-    texto: "Dibuja o escribe algo de la ship y compártelo con la Chirunation. Las bases están dentro de cada formulario.",
+    texto: "Dibuja o escribe algo de la ship y compártelo con la Chirunation. Las bases están dentro de cada formulario (fecha límite: 30 de diciembre de 2026).",
     botones: [
       { texto: "Concurso de dibujo",    icono: "dibujo",    link: "https://forms.gle/tH6Q79ND79LfpE8p7" },
       { texto: "Concurso de escritura", icono: "escritura", link: "", proximamente: true },
@@ -56,7 +56,7 @@ window.CHIRU = {
   /* ---------- 4. VIDEO DEL MAP ---------- */
   // Pega cualquier link de YouTube (youtu.be/... o youtube.com/watch?v=...).
   map: {
-    titulo: "Mira el MAP Chiru",
+    titulo: "Mira el MAP Chirú",
     youtube: "https://youtu.be/UL9O9xbVSrU",
   },
 
@@ -85,7 +85,7 @@ window.CHIRU = {
   maxUltimo: 5,
   ultimo: [
     { tipo: "aviso",  titulo: "¡Concurso de dibujo abierto!", detalle: "Inscríbete en el formulario", fecha: "", link: "https://forms.gle/tH6Q79ND79LfpE8p7" },
-    { tipo: "video",  titulo: "Ya salió el MAP Chiru",        detalle: "Míralo en YouTube",           fecha: "", link: "https://youtu.be/UL9O9xbVSrU" },
+    { tipo: "video",  titulo: "Ya salió el MAP Chirú",        detalle: "Míralo en YouTube",           fecha: "", link: "https://youtu.be/UL9O9xbVSrU" },
     { tipo: "musica", titulo: "La playlist de la ship",       detalle: "Escúchala en Spotify",        fecha: "", link: "https://open.spotify.com/playlist/7C9DltlF1riOg3W5rhHQ4j" },
     { tipo: "news",   titulo: "Slides de la CC2025",          detalle: "Revívelas aquí",              fecha: "", link: "https://drive.google.com/file/d/1cwRm8RrBGzPfCTTBt_qsNaXQ2iZcNwIi/view?usp=sharing" },
   ],
@@ -111,8 +111,8 @@ window.CHIRU = {
 
   // Pega el link de Spotify (playlist, álbum o canción).
   playlist: {
-    etiqueta: "Playlist de la ship",
-    titulo: "La playlist de la Chirunation",
+    etiqueta: "Algunas de las tantas canciones que recuerdan a la ship",
+    titulo: "Chiruplaylist",
     spotify: "https://open.spotify.com/playlist/7C9DltlF1riOg3W5rhHQ4j",
   },
 
@@ -122,20 +122,24 @@ window.CHIRU = {
   // pais: "peru", "chile" o "ambos" (cambia el color de la fecha).
   // Se ordenan solos por fecha y se marca la próxima que viene.
   calendario: [
-    { dia: 14, mes: 2, pais: "ambos", titulo: "San Valentín Chiru", texto: "Día de fanarts, fics y mucho amor para la ship." },
-    { dia: 28, mes: 7, pais: "peru",  titulo: "Fiestas Patrias del Perú", texto: "28 y 29 de julio: ¡feliz cumple, Perú!" },
-    { dia: 18, mes: 9, pais: "chile", titulo: "Fiestas Patrias de Chile", texto: "18 y 19 de septiembre: ¡feliz dieciocho, Chile!" },
-  ],
+  // --- LO QUE QUEDA DE 2026 ---
+  { dia: 30, mes: 12, anio: 2026, pais: "ambos", titulo: "Cierre de Concursos 2026", texto: "¡Último día del año para enviar sus fics y dibujos de la ship!" },
 
+  // --- CALENDARIO 2027 ---
+  { dia: 7, mes: 2, anio: 2027, pais: "ambos", titulo: "Día de la Amistad Peruano-Chilena", texto: "¡El día oficial de nuestra hermandad! Celebrando la unión histórica entre ambos países." },
+  { dia: 14, mes: 2, anio: 2027, pais: "ambos", titulo: "San Valentín Chirú", texto: "Día de fanarts, fics y mucho amor para la ship." },
+  { dia: 28, mes: 7, anio: 2027, pais: "peru", titulo: "Fiestas Patrias del Perú", texto: "28 y 29 de julio: ¡feliz cumple, Perú!" },
+  { dia: 18, mes: 9, anio: 2027, pais: "chile", titulo: "Fiestas Patrias de Chile", texto: "18 y 19 de septiembre: ¡feliz dieciocho, Chile!" },
+],
 
-  /* ---------- 10. ¿QUÉ ES CHIRU? (ventanita de la burbuja del medio) ---------- */
+  /* ---------- 10. ¿QUÉ ES CHIRÚ? (ventanita de la burbuja del medio) ---------- */
   queEsChiru: {
-    titulo: "¿Qué es Chiru?",
-    intro: "Chiru es el ship entre Chile y Perú: CHIle + peRU. La Chirunation es la comunidad que lo celebra con fanarts, fics, edits, concursos y mucho cariño entre los dos países.",
+    titulo: "¿Qué es Chirú?",
+    intro: "Chirú / PeChi / ChiPe es el ship entre Chile y Perú. La Chirunation es la comunidad que lo celebra con fanarts, fics, edits, concursos y mucho cariño entre los dos países.",
     puntos: [
-      { titulo: "¿Qué hacemos?",   texto: "Organizamos concursos de dibujo y escritura, compartimos contenido de la ship y hacemos proyectos en comunidad, como el MAP Chiru." },
-      { titulo: "¿Quién puede unirse?", texto: "¡Cualquier persona que ame la ship! Peruanxs, chilenxs y de donde sea, siempre con respeto." },
-      { titulo: "¿Cómo me uno?",   texto: "Entra a nuestro grupo de WhatsApp o al servidor de Discord. Los links están en el pase a bordo." },
+      { titulo: "¿Qué hacemos?",   texto: "Compartimos contenido de la ship y hacemos proyectos en comunidad, como el MAP Chirú. Actualmente estamos organizando concursos de dibujo y escritura," },
+      { titulo: "¿Quién puede unirse?", texto: "¡Cualquier persona que ame este ship es súper bienvenida! Ya sea de Perú, Chile o cualquier otro hermoso rincón del mundo" },
+      { titulo: "¿Cómo me uno?",   texto: "Entra a nuestro grupo de WhatsApp o síguenos en nuestras otras redes. Los links están en el pase a bordo." },
     ],
   },
 

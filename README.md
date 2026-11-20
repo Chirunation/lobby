@@ -100,7 +100,7 @@ En `burbujas`: cada una tiene `texto`, `icono` y **una** de estas dos cosas:
 
 Iconos disponibles: `calendario`, `corazon`, `slides`, `libro`, `estrella`, `musica`, `video`.
 
-### Editar "¿Qué es Chiru?"
+### Editar "¿Qué es Chirú?"
 En `queEsChiru`: cambia `intro` y los `puntos` (cada uno con `titulo` y `texto`).
 
 ### Redes sociales
