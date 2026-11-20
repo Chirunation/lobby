@@ -92,7 +92,7 @@ window.CHIRU = {
 
 
   /* ---------- 8. SECCIÓN DE ABAJO: LIBRO, FOTO Y PLAYLIST ---------- */
-  tituloSeccionAbajo: "Las historias que nos unen ♡",
+  tituloSeccionAbajo: "Buen viaje ♡",
 
   libro: {
     titulo: "Las historias que nos unen",
