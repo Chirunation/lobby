@@ -157,8 +157,18 @@
       return '<div class="chiru-punto"><h3>' + esc(p.titulo) + "</h3><p>" + esc(p.texto) + "</p></div>";
     }).join("") + "</div>");
 
+  /* ---------- 12. proyectos ---------- */
+  var COLORES = { peru: 1, chile: 1, ambos: 1 };
+  poner("lista-proyectos", (D.proyectos || []).filter(function (p) { return p && p.titulo; }).map(function (p) {
+    var color = COLORES[p.color] ? p.color : "ambos";
+    return '<li class="fecha proyecto"><div class="fecha-dia ' + color + '">' + icono(p.icono || "estrella", 32, "#fff") + "</div>" +
+      '<div class="proyecto-txt"><h3>' + esc(p.titulo) + "</h3>" + (p.descripcion ? "<p>" + esc(p.descripcion) + "</p>" : "") +
+      (p.link ? '<a class="btn btn-rojo btn-chico proyecto-btn" href="' + esc(p.link) + '" target="_blank" rel="noopener">' + esc(p.boton || "Ver proyecto") + "</a>" : "") +
+      "</div></li>";
+  }).join("") || "<li>Pronto habrá nuevos proyectos ♡</li>");
+
   /* ---------- ventanitas ---------- */
-  var VENTANAS = { calendario: "ventana-calendario", chiru: "ventana-chiru" };
+  var VENTANAS = { calendario: "ventana-calendario", chiru: "ventana-chiru", proyectos: "ventana-proyectos" };
   document.addEventListener("click", function (ev) {
     var abre = ev.target.closest("[data-abre]");
     if (abre) {

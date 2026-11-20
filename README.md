@@ -89,13 +89,31 @@ En `calendario: [` agrega:
 - `pais`: `"peru"` (rojo), `"chile"` (azul) o `"ambos"` (mitad y mitad)
 - Se ordenan solas y la próxima fecha sale marcada con "¡la que viene!".
 
+### Agregar un proyecto
+En `proyectos: [` agrega (salen en el mismo orden en que los escribas, el primero arriba):
+
+```js
+{
+  titulo: "Nombre del proyecto",
+  descripcion: "Una frase corta que cuente de qué se trata.",
+  boton: "Ver el proyecto",
+  link: "https://...",
+  icono: "estrella",
+  color: "ambos",
+},
+```
+- `color`: `"peru"` (rojo), `"chile"` (azul) o `"ambos"` (mitad y mitad)
+- `icono`: `calendario`, `corazon`, `slides`, `libro`, `estrella`, `musica` o `video`
+- La tarjeta entera y el botón abren el `link` en otra pestaña.
+- Si borras todos, la ventanita dice "Pronto habrá nuevos proyectos ♡".
+
 ### Cambiar el video del MAP o la playlist
 Pega el link nuevo en `map.youtube` o `playlist.spotify`. Cualquier link de YouTube o Spotify
 (playlist, álbum o canción) sirve: la página arma el reproductor sola.
 
 ### Cambiar las 3 burbujas del planeta
 En `burbujas`: cada una tiene `texto`, `icono` y **una** de estas dos cosas:
-- `abre: "calendario"` o `abre: "chiru"` → abre esa ventanita
+- `abre: "calendario"`, `abre: "chiru"` o `abre: "proyectos"` → abre esa ventanita
 - `link: "https://..."` → abre el link en otra pestaña
 
 Iconos disponibles: `calendario`, `corazon`, `slides`, `libro`, `estrella`, `musica`, `video`.

@@ -30,12 +30,13 @@ window.CHIRU = {
   /* ---------- 2. LAS 3 BURBUJAS SOBRE EL PLANETA ---------- */
   // abre: "calendario"  → abre la ventanita del calendario
   // abre: "chiru"       → abre la ventanita de ¿Qué es Chirú?
+  // abre: "proyectos"   → abre la ventanita de Proyectos Chirú
   // link: "https://..."  → abre ese link en otra pestaña
   // icono disponible: calendario, corazon, slides, libro, estrella, musica, video
   burbujas: [
     { texto: "Calendario",     icono: "calendario", abre: "calendario" },
     { texto: "¿Qué es Chirú?", icono: "corazon",    abre: "chiru" },
-    { texto: "CC2025",         icono: "slides",     link: "https://drive.google.com/file/d/1cwRm8RrBGzPfCTTBt_qsNaXQ2iZcNwIi/view?usp=sharing", detalle: "slides" },
+    { texto: "Proyectos",      icono: "estrella",   abre: "proyectos" },
   ],
 
 
@@ -161,5 +162,33 @@ window.CHIRU = {
       { id: "pelota",   nombre: "Pelota",           reaccion: "futbol", peru: "¡Fue offside!",        chile: "¡Fue penal!" },
     ],
   },
+
+
+  /* ---------- 12. PROYECTOS (ventanita de la burbuja "Proyectos") ---------- */
+  // Salen en el MISMO orden en que los escribes aquí (el primero va arriba).
+  // titulo:      nombre del proyecto
+  // descripcion: texto corto que sale debajo del título
+  // boton:       lo que dice el botón (ej. "Ver la presentación")
+  // link:        el link que se abre en otra pestaña al tocar la tarjeta o el botón
+  // icono disponible: calendario, corazon, slides, libro, estrella, musica, video
+  // color: "peru" (rojo), "chile" (azul) o "ambos" (mitad y mitad)
+  proyectos: [
+    {
+      titulo: "CC2025",
+      descripcion: "Nuestra presentación de la ship en la CountryCon 2025, en Lima. ¡Revive las slides de ese día!",
+      boton: "Ver la presentación",
+      link: "https://drive.google.com/file/d/1cwRm8RrBGzPfCTTBt_qsNaXQ2iZcNwIi/view?usp=sharing",
+      icono: "slides",
+      color: "ambos",
+    },
+    {
+      titulo: "Revista Chirú 2026",
+      descripcion: "Una revista con escritos, ilustraciones, encuentros culturales y los acontecimientos del 2026 que conectan a Perú y Chile, sin olvidar los mejores momentos del fandom en Countryhumans, Countryballs, LatinHetalia y personajes originales.",
+      boton: "Ver video promocional",
+      link: "https://www.instagram.com/reel/DfdNHbwh5Qi/",
+      icono: "libro",
+      color: "peru",
+    },
+  ],
 
 };

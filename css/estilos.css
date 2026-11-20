@@ -279,6 +279,12 @@ a.item-ultimo:hover { transform: translateX(4px); color: var(--tinta); }
 .chiru-punto { background: #fff; border-radius: 20px; padding: 14px 16px; }
 .chiru-punto h3 { font-size: 18px; color: var(--azul); margin-bottom: 2px; }
 .chiru-punto p { margin: 0; color: #3b4677; }
+/* proyectos: reusa .fechas / .fecha / .fecha-dia; toda la tarjeta es clickeable gracias al ::after del botón */
+.proyecto { position: relative; align-items: flex-start; transition: box-shadow .2s; }
+.proyecto:hover, .proyecto:focus-within { box-shadow: 0 0 0 3px var(--rosa); }
+.proyecto-txt { flex: 1 1 auto; min-width: 0; overflow-wrap: anywhere; }
+.proyecto-btn { display: inline-flex; margin-top: 10px; min-height: 44px; text-align: center; }
+.proyecto-btn::after { content: ""; position: absolute; inset: 0; border-radius: 20px; }
 
 /* ---------- responsive ---------- */
 @media (max-width: 1100px) {
@@ -301,6 +307,8 @@ a.item-ultimo:hover { transform: translateX(4px); color: var(--tinta); }
   .costa { height: 190px; }
   .card { padding: 18px; }
   .cita blockquote { font-size: 27px; }
+  .proyecto .fecha-dia { width: 54px; height: 54px; border-radius: 15px; }
+  .proyecto-btn { display: flex; width: 100%; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
