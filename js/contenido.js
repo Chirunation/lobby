@@ -19,12 +19,12 @@ window.CHIRU = {
     titulo: "Chirunation",
     subtitulo: "Celebrando los lazos entre Perú y Chile ♡",
     bienvenida: "¡Bienvenidx a la Chirunation! ♡",          // texto que pasa en la cinta de arriba
-    pie: "hecho con amor entre Lima y Santiago ♡ fan site sin fines de lucro",
+    pie: "Hecho con amor chiruano ♡ fan site sin fines de lucro",
   },
 
   // Botón de la barra de arriba (a la derecha de la cinta).
   // Para quitarlo, deja:  botonBarra: null,
-  botonBarra: { texto: "Únete al Discord", link: "https://discord.gg/9dZywuHEe" },
+  botonBarra: { texto: "Únete al canal de Whatsapp", link: "https://whatsapp.com/channel/0029VbDpPB8DJ6H9KE6eay0n" },
 
 
   /* ---------- 2. LAS 3 BURBUJAS SOBRE EL PLANETA ---------- */
@@ -63,8 +63,8 @@ window.CHIRU = {
 
   /* ---------- 5. NOTITA CON CITA (columna izquierda) ---------- */
   cita: {
-    texto: "De Lima a Santiago, el mismo mar nos une.",
-    autor: "Chirunation",
+    texto: "Proclamamos nuestra voluntad de obrar decididamente para que Chile, Perú y todos los pueblos de América vivan siempre en paz y amistad y nunca vuelva a surgir entre nosotros una guerra",
+    autor: "Declaración conjunta de Mario Vargas Llosa (Perú) y Jorge Edwards (Chile), publicada en La Tercera",
   },
 
 
@@ -145,8 +145,8 @@ window.CHIRU = {
   // ceviche, empanada, alfajor, flor, pisco, pelota  (cada uno ya tiene su dibujito)
   // reaccion: "comer" (felices), "amor" (corazones), "pelear" (se enojan), "futbol" (juegan y se pelean)
   juego: {
-    titulo: "¡Juega con Perú y Chile!",
-    instrucciones: "Arrástralos para que se den un besito, o elige algo de la mesita con las flechas y llévaselo ♡",
+    titulo: "Diviértete con Perú y Chile",
+    instrucciones: "Arrastra a los PePo y haz click en los objetos. Los tonotos están en tus manos.",
     beso: { peru: "¡Mua!", chile: "♡ ♡ ♡" },
     items: [
       { id: "ceviche",  nombre: "Ceviche",          reaccion: "comer",  peru: "¡Prueba mi ceviche!", chile: "¡Riquísimo!" },
