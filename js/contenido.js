@@ -49,7 +49,7 @@ window.CHIRU = {
     texto: "Dibuja o escribe algo de la ship y compártelo con la Chirunation. Las bases están dentro de cada formulario (fecha límite: 30 de diciembre de 2026).",
     botones: [
       { texto: "Concurso de dibujo",    icono: "dibujo",    link: "https://forms.gle/tH6Q79ND79LfpE8p7" },
-      { texto: "Concurso de escritura", icono: "escritura", link: "", proximamente: true },
+      { texto: "Concurso de escritura", icono: "escritura", link: "https://forms.gle/sJ4wKPTLzNtoaA4v9" },
     ],
   },
 
