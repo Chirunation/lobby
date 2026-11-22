@@ -177,7 +177,7 @@ window.CHIRU = {
       titulo: "CC2025",
       descripcion: "Nuestra presentación de la ship en la CountryCon 2025, en Lima. ¡Revive las slides de ese día!",
       boton: "Ver la presentación",
-      link: "https://drive.google.com/file/d/1cwRm8RrBGzPfCTTBt_qsNaXQ2iZcNwIi/view?usp=sharing",
+      link: "assets/pdf/CHIRUCHIPE.pdf",
       icono: "slides",
       color: "ambos",
     },
