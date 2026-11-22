@@ -1,8 +1,3 @@
-/* =====================================================================
-   juego.js — Perú y Chile en pixel art ♡
-   Los textos se cambian en js/contenido.js (sección "juego").
-   Aquí solo está la lógica y los dibujitos.
-   ===================================================================== */
 (function () {
   "use strict";
   var J = window.CHIRU && window.CHIRU.juego;
@@ -14,7 +9,6 @@
   var lector = document.getElementById("juego-estado");
   var nombreItem = document.getElementById("item-nombre");
 
-  /* ---------------- colores y dibujitos ---------------- */
   var cacheRGB = {};
   function rgb(h) {
     if (!cacheRGB[h]) cacheRGB[h] = [parseInt(h.substr(1, 2), 16), parseInt(h.substr(3, 2), 16), parseInt(h.substr(5, 2), 16)];
@@ -24,7 +18,6 @@
     k: "#23264a", w: "#ffffff", g: "#cfe9f5", r: "#d6334f", y: "#f2b552", o: "#c98a2e", d: "#b86f1f",
     l: "#5aa84a", p: "#8e4fb8", O: "#ff9a3c", b: "#dbe8ff", c: "#e8c08a", m: "#a0612c", Y: "#ffd84a"
   };
-  // Cada objeto es una cuadrícula de 12×12. "." = transparente. Letras = colores de PAL.
   var SPRITES = {
     pisco: [
       "............", ".....kkk....", ".....kgk....", ".....kgk....", "....kgggk...", "...kgggggk..",
@@ -55,7 +48,6 @@
     ctx.clearRect(0, 0, 12, 12); ctx.putImageData(img, 0, 0);
   }
 
-  /* ---------------- las pelotitas ---------------- */
   var N = 24;
   function dibujarBola(p, ahora) {
     var img = p.ctx.createImageData(N, N), d = img.data;
@@ -78,7 +70,7 @@
       if (dx + dy > 8.5) { var c = rgb(col); col = "#" + c.map(function (v) { return ("0" + Math.round(v * 0.86).toString(16)).slice(-2); }).join(""); }
       px(x, y, col);
     }
-    if (p.tipo === "chile") { // estrellita
+    if (p.tipo === "chile") {
       [[7, 4], [5, 5], [6, 5], [7, 5], [8, 5], [9, 5], [6, 6], [7, 6], [8, 6], [6, 7], [8, 7]].forEach(function (q) { px(q[0], q[1], "#ffffff"); });
     }
     var f = p.mira, e1 = Math.round(12 + f * 2.5 - 3.5), ey = 11, K = "#23264a";
@@ -98,7 +90,7 @@
           px(xx, yy, borde ? K : "#ffffff");
         }
         if (animo === "enojado") {
-          var s = i === 0 ? 1 : -1; // la ceja baja hacia el centro de la cara
+          var s = i === 0 ? 1 : -1;
           px(ex - 2 * s, ey - 4, K); px(ex - s, ey - 4, K); px(ex, ey - 3, K); px(ex + s, ey - 2, K); px(ex + 2 * s, ey - 2, K);
         }
       }
@@ -139,7 +131,6 @@
   var peru = new Personaje("peru", "Perú"), chile = new Personaje("chile", "Chile");
   var ambos = [peru, chile];
 
-  /* ---------------- objeto de la mesita ---------------- */
   var obj = document.createElement("canvas");
   obj.width = 12; obj.height = 12; obj.className = "objeto"; obj.tabIndex = 0;
   esc.appendChild(obj);
@@ -159,7 +150,6 @@
   document.getElementById("item-ant").addEventListener("click", function () { cancelar(); elegirItem(idx - 1); aLaMesa(); });
   document.getElementById("item-sig").addEventListener("click", function () { cancelar(); elegirItem(idx + 1); aLaMesa(); });
 
-  /* ---------------- medidas ---------------- */
   var W, H, S, I, suelo;
   function medir(primeraVez) {
     var viejoW = W;
@@ -182,7 +172,6 @@
     else { item.objX = m.x; item.objY = m.y; }
   }
 
-  /* ---------------- diálogos y corazones ---------------- */
   function decir(p, texto, enojo) {
     if (!texto) return;
     p.globo.textContent = texto;
@@ -207,7 +196,6 @@
   }
   function anunciar(t) { lector.textContent = t; }
 
-  /* ---------------- reacciones ---------------- */
   var reac = 0, ocupado = false;
   function luego(id, ms, fn) { setTimeout(function () { if (id === reac) fn(); }, ms); }
   function cancelar() {
@@ -307,7 +295,6 @@
     else beso({ peru: it.peru, chile: it.chile }, true);
   }
 
-  /* ---------------- arrastrar ---------------- */
   function puntero(ev) {
     var r = esc.getBoundingClientRect();
     return { x: ev.clientX - r.left, y: ev.clientY - r.top };
@@ -364,7 +351,6 @@
     anunciar("Juego reiniciado");
   });
 
-  /* ---------------- bucle de animación ---------------- */
   var antes = performance.now();
   function cuadro(ahora) {
     var dt = Math.min(3, (ahora - antes) / 16.7); antes = ahora;
@@ -391,7 +377,7 @@
       p.cv.style.top = top + "px";
       p.cv.style.transform = "rotate(" + p.inclinar + "deg)";
       p.globo.style.left = p.x + "px";
-      var junto = Math.abs(otro.x - p.x) < S * 2.2 && p.tipo === "chile";  // si están cerca, el globo de Chile sube para no taparse
+      var junto = Math.abs(otro.x - p.x) < S * 2.2 && p.tipo === "chile";
       p.globo.style.top = (top - 8 - (junto ? 36 : 0)) + "px";
       dibujarBola(p, ahora);
     });

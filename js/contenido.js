@@ -1,38 +1,15 @@
-/* =====================================================================
-   ♡  CONTENIDO DE LA CHIRUNATION  ♡
-   ---------------------------------------------------------------------
-   Este es el ÚNICO archivo que necesitas tocar para cambiar textos,
-   links, avisos, publicaciones, fechas del calendario y el juego.
-
-   Reglas rápidas (lee el README para más detalle):
-   • Los textos van entre comillas:  "así"
-   • Cada elemento termina con una coma  ,
-   • Las líneas que empiezan con  //  son notas: la página las ignora.
-   • Para quitar algo, bórralo completo (desde { hasta },).
-   • Para agregar algo, copia un bloque { ... }, pégalo y cámbialo.
-   ===================================================================== */
-
 window.CHIRU = {
 
-  /* ---------- 1. DATOS GENERALES ---------- */
   sitio: {
     titulo: "Chirunation",
     subtitulo: "Celebrando los lazos entre Perú y Chile ♡",
-    bienvenida: "¡Bienvenidx a la Chirunation! ♡",          // texto que pasa en la cinta de arriba
+    bienvenida: "¡Bienvenidx a la Chirunation! ♡",
     pie: "Fan site sin fines de lucro ♡ hecho con amor chiruano",
   },
 
-  // Botón de la barra de arriba (a la derecha de la cinta).
-  // Para quitarlo, deja:  botonBarra: null,
   botonBarra: { texto: "Únete al canal de Whatsapp", link: "https://whatsapp.com/channel/0029VbDpPB8DJ6H9KE6eay0n" },
 
 
-  /* ---------- 2. LAS 3 BURBUJAS SOBRE EL PLANETA ---------- */
-  // abre: "calendario"  → abre la ventanita del calendario
-  // abre: "chiru"       → abre la ventanita de ¿Qué es Chirú?
-  // abre: "proyectos"   → abre la ventanita de Proyectos Chirú
-  // link: "https://..."  → abre ese link en otra pestaña
-  // icono disponible: calendario, corazon, slides, libro, estrella, musica, video
   burbujas: [
     { texto: "Calendario",     icono: "calendario", abre: "calendario" },
     { texto: "¿Qué es Chirú?", icono: "corazon",    abre: "chiru" },
@@ -40,9 +17,6 @@ window.CHIRU = {
   ],
 
 
-  /* ---------- 3. AVISO DE CONCURSOS (columna izquierda) ---------- */
-  // Un botón con  proximamente: true  (o sin link) sale gris y no se puede tocar.
-  // icono disponible: dibujo, escritura, estrella, video, musica, libro
   concursos: {
     etiqueta: "Nuevo aviso",
     titulo: "¡Participa en los concursos!",
@@ -54,22 +28,18 @@ window.CHIRU = {
   },
 
 
-  /* ---------- 4. VIDEO DEL MAP ---------- */
-  // Pega cualquier link de YouTube (youtu.be/... o youtube.com/watch?v=...).
   map: {
     titulo: "Mira el MAP Chirú",
     youtube: "https://youtu.be/UL9O9xbVSrU",
   },
 
 
-  /* ---------- 5. NOTITA CON CITA (columna izquierda) ---------- */
   cita: {
     texto: "Proclamamos nuestra voluntad de obrar decididamente para que Chile, Perú y todos los pueblos de América vivan siempre en paz y amistad y nunca vuelva a surgir entre nosotros una guerra",
     autor: "Declaración conjunta de Mario Vargas Llosa (Perú) y Jorge Edwards (Chile), publicada en La Tercera",
   },
 
 
-  /* ---------- 6. ENLACES (pase a bordo, columna derecha) ---------- */
   enlaces: [
     { red: "X / Twitter", usuario: "@chipelovers", link: "https://x.com/chipelovers" },
     { red: "Instagram",   usuario: "@chirunation", link: "https://www.instagram.com/chirunation/" },
@@ -79,10 +49,6 @@ window.CHIRU = {
   ],
 
 
-  /* ---------- 7. LO ÚLTIMO DE LA SHIP (columna derecha) ---------- */
-  // Lo más nuevo va ARRIBA. Se muestran solo las primeras 5 (cámbialo en  maxUltimo).
-  // tipo disponible (cambia el color de la etiqueta): fic, art, edit, video, musica, aviso, news
-  // link y fecha son opcionales: si los dejas "" no se muestran.
   maxUltimo: 5,
   ultimo: [
     { tipo: "aviso",  titulo: "¡Concurso de dibujo abierto!", detalle: "Inscríbete en el formulario", fecha: "", link: "https://forms.gle/tH6Q79ND79LfpE8p7" },
@@ -92,7 +58,6 @@ window.CHIRU = {
   ],
 
 
-  /* ---------- 8. SECCIÓN DE ABAJO: LIBRO, FOTO Y PLAYLIST ---------- */
   tituloSeccionAbajo: "Buen viaje ♡",
 
   libro: {
@@ -106,11 +71,10 @@ window.CHIRU = {
 
   foto: {
     imagen: "assets/img/chiru-playa.jpg",
-    descripcion: "Peluches tejidos de Perú y Chile abrazados frente al mar",   // para lectores de pantalla
+    descripcion: "Peluches tejidos de Perú y Chile abrazados frente al mar",
     pie: "juntitos frente al mismo mar ♡",
   },
 
-  // Pega el link de Spotify (playlist, álbum o canción).
   playlist: {
     etiqueta: "Algunas de las tantas canciones que recuerdan a la ship",
     titulo: "Chiruplaylist",
@@ -118,22 +82,15 @@ window.CHIRU = {
   },
 
 
-  /* ---------- 9. CALENDARIO (ventanita de la burbuja "Calendario") ---------- */
-  // dia y mes en números (mes: 1 = enero ... 12 = diciembre).
-  // pais: "peru", "chile" o "ambos" (cambia el color de la fecha).
-  // Se ordenan solos por fecha y se marca la próxima que viene.
   calendario: [
-  // --- LO QUE QUEDA DE 2026 ---
   { dia: 30, mes: 12, anio: 2026, pais: "ambos", titulo: "Cierre de Concursos 2026", texto: "¡Último día del año para enviar sus fics y dibujos de la ship!" },
 
-  // --- CALENDARIO 2027 ---
   { dia: 7, mes: 2, anio: 2027, pais: "ambos", titulo: "Día de la Amistad Peruano-Chilena", texto: "¡El día oficial de nuestra hermandad! Celebrando la unión histórica entre ambos países." },
   { dia: 14, mes: 2, anio: 2027, pais: "ambos", titulo: "San Valentín Chirú", texto: "Día de fanarts, fics y mucho amor para la ship." },
   { dia: 28, mes: 7, anio: 2027, pais: "peru", titulo: "Fiestas Patrias del Perú", texto: "28 y 29 de julio: ¡feliz cumple, Perú!" },
   { dia: 18, mes: 9, anio: 2027, pais: "chile", titulo: "Fiestas Patrias de Chile", texto: "18 y 19 de septiembre: ¡feliz dieciocho, Chile!" },
 ],
 
-  /* ---------- 10. ¿QUÉ ES CHIRÚ? (ventanita de la burbuja del medio) ---------- */
   queEsChiru: {
     titulo: "¿Qué es Chirú?",
     intro: "Chirú / PeChi / ChiPe es el ship entre Chile y Perú. La Chirunation es la comunidad que lo celebra con fanarts, fics, edits, concursos y mucho cariño entre los dos países.",
@@ -145,10 +102,6 @@ window.CHIRU = {
   },
 
 
-  /* ---------- 11. EL JUEGO DE PERÚ Y CHILE ---------- */
-  // Puedes cambiar los textos de cada uno. Las comidas/objetos disponibles son:
-  // ceviche, empanada, alfajor, flor, pisco, pelota  (cada uno ya tiene su dibujito)
-  // reaccion: "comer" (felices), "amor" (corazones), "pelear" (se enojan), "futbol" (juegan y se pelean)
   juego: {
     titulo: "Diviértete con Perú y Chile",
     instrucciones: "Arrastra a los PePo y haz click en los objetos. Los tonotos están en tus manos.",
@@ -164,14 +117,6 @@ window.CHIRU = {
   },
 
 
-  /* ---------- 12. PROYECTOS (ventanita de la burbuja "Proyectos") ---------- */
-  // Salen en el MISMO orden en que los escribes aquí (el primero va arriba).
-  // titulo:      nombre del proyecto
-  // descripcion: texto corto que sale debajo del título
-  // boton:       lo que dice el botón (ej. "Ver la presentación")
-  // link:        el link que se abre en otra pestaña al tocar la tarjeta o el botón
-  // icono disponible: calendario, corazon, slides, libro, estrella, musica, video
-  // color: "peru" (rojo), "chile" (azul) o "ambos" (mitad y mitad)
   proyectos: [
     {
       titulo: "CC2025",

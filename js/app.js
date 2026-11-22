@@ -1,7 +1,3 @@
-/* =====================================================================
-   app.js — dibuja la página con lo que hay en js/contenido.js
-   (Normalmente NO necesitas tocar este archivo.)
-   ===================================================================== */
 (function () {
   "use strict";
   var D = window.CHIRU;
@@ -12,7 +8,6 @@
     return;
   }
 
-  /* ---------- utilidades ---------- */
   function esc(t) {
     return String(t == null ? "" : t).replace(/[&<>"']/g, function (c) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
@@ -50,7 +45,6 @@
     return m ? "https://open.spotify.com/embed/" + m[1] + "/" + m[2] + "?utm_source=generator" : "";
   }
 
-  /* ---------- 1. generales ---------- */
   var S = D.sitio || {};
   document.querySelectorAll(".t-main").forEach(function (el) { el.textContent = S.titulo || "Chirunation"; });
   if ($("t-sub")) $("t-sub").textContent = S.subtitulo || "";
@@ -62,7 +56,6 @@
     poner("boton-barra", '<a class="btn btn-azul btn-chico" href="' + esc(D.botonBarra.link) + '"' + externo(D.botonBarra.link) + ">" + esc(D.botonBarra.texto) + "</a>");
   }
 
-  /* ---------- 2. burbujas ---------- */
   var POS = [[20, 15], [50, 7], [80, 15]];
   var ANILLOS = ["#b9d0ff", "#ffb3c1", "#f6d39c"];
   var COLOR_ICONO = ["#3a64e0", "#d6334f", "#b36b1a"];
@@ -73,7 +66,6 @@
     return '<a class="burbuja" href="' + esc(b.link || "#") + '"' + externo(b.link) + estilo + ">" + dentro + "</a>";
   }).join(""));
 
-  /* ---------- 3. concursos ---------- */
   var K = D.concursos;
   if (K) {
     poner("concursos",
@@ -86,7 +78,6 @@
       }).join("") + "</div>");
   } else { $("concursos").remove(); }
 
-  /* ---------- 4. MAP ---------- */
   var yt = D.map && idYoutube(D.map.youtube);
   if (yt) {
     poner("map", "<h2>" + esc(D.map.titulo) + '</h2><div class="video"><iframe src="https://www.youtube-nocookie.com/embed/' + yt +
@@ -94,19 +85,16 @@
       '<a class="btn btn-azul" href="https://youtu.be/' + yt + '" target="_blank" rel="noopener">Ver en YouTube ' + icono("video", 18) + "</a>");
   } else { $("map").remove(); }
 
-  /* ---------- 5. cita ---------- */
   if (D.cita && D.cita.texto) {
     poner("cita", '<span class="comillas" aria-hidden="true">“</span><blockquote>' + esc(D.cita.texto) + "</blockquote>" +
       (D.cita.autor ? "<figcaption>— " + esc(D.cita.autor) + "</figcaption>" : ""));
   } else { $("cita").remove(); }
 
-  /* ---------- 6. enlaces ---------- */
   poner("enlaces", (D.enlaces || []).map(function (e) {
     return '<a class="enlace" href="' + esc(e.link) + '"' + externo(e.link) + "><span>" + esc(e.red) +
       (e.usuario ? " <small>" + esc(e.usuario) + "</small>" : "") + '</span><span class="cor" aria-hidden="true">♡</span></a>';
   }).join(""));
 
-  /* ---------- 7. lo último ---------- */
   var ult = (D.ultimo || []).slice(0, D.maxUltimo || 5);
   if (ult.length) {
     poner("ultimo", '<h2 id="ultimo-titulo">Lo último de la ship ✿</h2><ul class="lista-ultimo">' + ult.map(function (u) {
@@ -117,7 +105,6 @@
     }).join("") + "</ul>");
   } else { $("ultimo").remove(); }
 
-  /* ---------- 8. abajo ---------- */
   poner("abajo-titulo", esc(D.tituloSeccionAbajo || ""));
   var L = D.libro;
   if (L) {
@@ -137,7 +124,6 @@
       '<a class="btn btn-verde" href="' + esc(P.spotify) + '" target="_blank" rel="noopener">' + icono("spotify") + "Abrir en Spotify</a>");
   } else { $("playlist").remove(); }
 
-  /* ---------- 9. calendario ---------- */
   var MESES = ["ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"];
   var hoy = new Date(), hoyN = (hoy.getMonth() + 1) * 100 + hoy.getDate();
   var fechas = (D.calendario || []).filter(function (f) { return f.dia && f.mes; })
@@ -149,7 +135,6 @@
       "<div><h3>" + esc(f.titulo) + (es ? '<span class="badge">¡la que viene!</span>' : "") + "</h3>" + (f.texto ? "<p>" + esc(f.texto) + "</p>" : "") + "</div></li>";
   }).join("") || "<li>Pronto agregaremos fechas ♡</li>");
 
-  /* ---------- 10. ¿qué es Chirú? ---------- */
   var Q = D.queEsChiru || {};
   poner("chiru-contenido", '<h2 id="chiru-titulo">' + esc(Q.titulo || "¿Qué es Chirú?") + "</h2>" +
     (Q.intro ? '<p class="chiru-intro">' + esc(Q.intro) + "</p>" : "") +
@@ -157,7 +142,6 @@
       return '<div class="chiru-punto"><h3>' + esc(p.titulo) + "</h3><p>" + esc(p.texto) + "</p></div>";
     }).join("") + "</div>");
 
-  /* ---------- 12. proyectos ---------- */
   var COLORES = { peru: 1, chile: 1, ambos: 1 };
   poner("lista-proyectos", (D.proyectos || []).filter(function (p) { return p && p.titulo; }).map(function (p) {
     var color = COLORES[p.color] ? p.color : "ambos";
@@ -167,7 +151,6 @@
       "</div></li>";
   }).join("") || "<li>Pronto habrá nuevos proyectos ♡</li>");
 
-  /* ---------- ventanitas ---------- */
   var VENTANAS = { calendario: "ventana-calendario", chiru: "ventana-chiru", proyectos: "ventana-proyectos" };
   document.addEventListener("click", function (ev) {
     var abre = ev.target.closest("[data-abre]");
@@ -177,6 +160,6 @@
       return;
     }
     if (ev.target.closest("[data-cerrar]")) { ev.target.closest("dialog").close(); return; }
-    if (ev.target.tagName === "DIALOG") ev.target.close(); // clic fuera de la ventanita
+    if (ev.target.tagName === "DIALOG") ev.target.close();
   });
 })();
