@@ -1,0 +1,710 @@
+/* ===============================================================
+   NAVEGACIÓN ENTRE MINIJUEGOS — misma identidad que Chirunation
+   =============================================================== */
+.game-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 0;
+  gap: 15px;
+}
+
+.game-viewport {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  position: relative;
+  border-radius: var(--radio);
+  transition: height 0.25s ease-in-out;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: flex-start;
+  transition: transform 0.5s ease-in-out;
+}
+
+.game-container > .game-item {
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+}
+
+.game-navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-width: 0;
+  gap: 10px;
+  padding: 0 2px 5px;
+}
+
+.nav-game-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-width: 0;
+  min-height: 48px;
+  padding: 7px 15px 7px 8px;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  background: var(--crema);
+  color: var(--tinta);
+  font: 700 14px var(--fuente-titulo);
+  white-space: nowrap;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #d9c9b0;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    background 0.15s ease;
+}
+
+.nav-game-button.next-button {
+  padding: 7px 8px 7px 15px;
+}
+
+.nav-game-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--rosa-suave);
+  color: var(--rojo-texto);
+  font: 700 26px/1 var(--fuente-titulo);
+  padding-bottom: 4px;
+}
+
+.nav-game-button.next-button .nav-game-icon {
+  background: var(--azul-suave);
+  color: #2a4ab0;
+}
+
+.nav-game-button:hover {
+  background: #fff0f4;
+}
+.nav-game-button:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #d9c9b0;
+}
+.nav-game-button:focus-visible,
+.snake-control:focus-visible,
+#snake-iniciar:focus-visible {
+  outline: 3px solid #ffd84a;
+  outline-offset: 3px;
+}
+
+#game-counter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  min-width: 56px;
+  min-height: 36px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: var(--tinta);
+  background: var(--rosa-suave);
+  font: 700 13px var(--fuente-titulo);
+  white-space: nowrap;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+/* =========================
+   CHILE THE SNAKE
+   ========================= */
+.juego2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.snake-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+}
+
+.snake-header h2 {
+  color: var(--rojo-texto);
+  margin: 0;
+}
+
+.snake-instrucciones {
+  width: 100%;
+  margin: 0;
+  line-height: 1.5;
+  color: #3b4677;
+  font-size: 15px;
+}
+
+.snake-stats {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.snake-stat {
+  background: var(--rosa-suave);
+  border-radius: 14px;
+  padding: 10px;
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+  color: var(--tinta);
+}
+
+.snake-stat:nth-child(2) {
+  background: var(--azul-suave);
+}
+.snake-stat span,
+.snake-stat strong {
+  display: block;
+}
+.snake-stat strong {
+  margin-top: 5px;
+  font: 700 18px var(--fuente-titulo);
+}
+
+.snake-area {
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 1;
+  position: relative;
+  border: 4px solid #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #ffe7ef;
+  box-shadow: 0 5px 0 #edcfda;
+  box-sizing: border-box;
+}
+
+#snake-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+  touch-action: none;
+}
+
+.snake-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(36, 48, 94, 0.78);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+  gap: 12px;
+  color: #fff;
+}
+
+.snake-overlay.hidden {
+  display: none;
+}
+.snake-overlay h3,
+.snake-overlay p {
+  color: #fff;
+  margin: 0;
+}
+
+#snake-iniciar {
+  background: var(--rosa-suave);
+  color: var(--rojo-texto);
+  border: 2px solid #fff;
+  border-radius: 999px;
+  padding: 11px 24px;
+  font: 700 15px var(--fuente-titulo);
+  box-shadow: 0 4px 0 #d59aaf;
+  cursor: pointer;
+}
+#snake-iniciar:hover {
+  background: #ffc6d4;
+}
+#snake-iniciar:active {
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #d59aaf;
+}
+
+/* Cruceta compacta y táctil */
+.snake-controls {
+  display: grid;
+  grid-template-columns: repeat(3, 50px);
+  grid-template-rows: repeat(2, 50px);
+  gap: 7px;
+  justify-content: center;
+  margin: 8px auto 0;
+}
+
+.snake-control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  background: var(--azul-suave);
+  color: #2a4ab0;
+  font: 700 18px var(--fuente-titulo);
+  box-shadow: 0 4px 0 #b1c7ef;
+  cursor: pointer;
+  touch-action: manipulation;
+  user-select: none;
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s,
+    background 0.15s;
+}
+.snake-control.up {
+  grid-column: 2;
+  grid-row: 1;
+}
+.snake-control.left {
+  grid-column: 1;
+  grid-row: 2;
+}
+.snake-control.down {
+  grid-column: 2;
+  grid-row: 2;
+}
+.snake-control.right {
+  grid-column: 3;
+  grid-row: 2;
+}
+.snake-control.up,
+.snake-control.down {
+  background: var(--rosa-suave);
+  color: var(--rojo-texto);
+  box-shadow: 0 4px 0 #e4afbf;
+}
+.snake-control:active {
+  background: #ffc2d3;
+  transform: translateY(3px);
+  box-shadow: 0 1px 0 #e4afbf;
+}
+
+.snake-ayuda {
+  font-size: 12px;
+  color: var(--tinta-suave);
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .game-wrapper {
+    gap: 12px;
+  }
+  .game-container > .game-item {
+    padding: 15px;
+  }
+  .snake-header h2 {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 480px) {
+  .game-wrapper {
+    gap: 10px;
+  }
+  .game-container > .game-item {
+    padding: 12px;
+  }
+  .juego-cabecera {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .juego-cabecera h2 {
+    min-width: 0;
+    font-size: 17px;
+  }
+  .juego-instrucciones,
+  .snake-instrucciones {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .snake-header h2 {
+    font-size: 19px;
+  }
+  .snake-stat {
+    padding: 8px;
+    font-size: 12px;
+  }
+  .snake-stat strong {
+    font-size: 16px;
+  }
+  .snake-area {
+    max-width: 100%;
+  }
+  .game-navigation {
+    gap: 6px;
+  }
+  .nav-game-button,
+  .nav-game-button.next-button {
+    padding: 6px 8px;
+    gap: 5px;
+    font-size: 12px;
+    min-height: 44px;
+  }
+  .nav-game-icon {
+    width: 26px;
+    height: 26px;
+    font-size: 22px;
+  }
+  #game-counter {
+    min-width: 46px;
+    padding: 6px 8px;
+    font-size: 12px;
+  }
+  .snake-controls {
+    grid-template-columns: repeat(3, 46px);
+    grid-template-rows: repeat(2, 46px);
+  }
+  .snake-control {
+    width: 46px;
+    height: 46px;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav-game-label {
+    display: none;
+  }
+  .nav-game-button,
+  .nav-game-button.next-button {
+    padding: 7px;
+  }
+}
+/* =========================
+   PERSONAJE PERÚ EN OVERLAY
+========================= */
+
+.snake-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(82, 86, 139, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 18px;
+  gap: 12px;
+}
+
+.snake-overlay.hidden {
+  display: none;
+}
+
+.snake-overlay-personaje.hidden {
+  display: none;
+}
+
+.snake-overlay-personaje {
+  margin-bottom: 4px;
+}
+
+.peru-chef {
+  position: relative;
+  width: 110px;
+  height: 128px;
+}
+
+/* Gorro */
+.chef-hat {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 52px;
+  height: 34px;
+  transform: translateX(-50%);
+}
+
+.chef-hat span {
+  position: absolute;
+  display: block;
+  background: #f4f4f4;
+  border: 3px solid #111;
+  box-sizing: border-box;
+}
+
+.chef-hat span:nth-child(1) {
+  width: 24px;
+  height: 20px;
+  top: 11px;
+  left: 14px;
+  border-bottom: none;
+}
+
+.chef-hat span:nth-child(2) {
+  width: 26px;
+  height: 22px;
+  top: 0;
+  left: 0;
+  border-radius: 10px 10px 8px 8px;
+}
+
+.chef-hat span:nth-child(3) {
+  width: 26px;
+  height: 22px;
+  top: 0;
+  right: 0;
+  border-radius: 10px 10px 8px 8px;
+}
+
+/* Cara de Perú */
+.peru-face {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 92px;
+  height: 92px;
+  transform: translateX(-50%);
+  border: 4px solid #111;
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(
+    to right,
+    #ff1730 0 33.33%,
+    #f4f4f4 33.33% 66.66%,
+    #ff1730 66.66% 100%
+  );
+}
+
+/* Ojos */
+.peru-face .ojo {
+  position: absolute;
+  top: 39px;
+  width: 12px;
+  height: 18px;
+  background: #2e2e2e;
+  border-radius: 3px;
+  box-shadow: inset 3px 3px 0 rgba(255, 255, 255, 0.35);
+}
+
+.peru-face .ojo-izq {
+  left: 25px;
+}
+.peru-face .ojo-der {
+  right: 25px;
+}
+
+/* Cejas */
+.peru-face .ceja {
+  position: absolute;
+  top: 27px;
+  width: 18px;
+  height: 4px;
+  background: #111;
+}
+
+.peru-face .ceja-izq {
+  left: 20px;
+}
+.peru-face .ceja-der {
+  right: 20px;
+}
+
+/* Boca base */
+.peru-face .boca {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Rubor */
+.peru-face .rubor {
+  position: absolute;
+  top: 56px;
+  width: 16px;
+  height: 5px;
+  background: #ffb4c6;
+  opacity: 0;
+}
+
+.peru-face .rubor-izq {
+  left: 15px;
+}
+.peru-face .rubor-der {
+  right: 15px;
+}
+
+/* ESTADO FELIZ */
+.peru-chef.feliz .ceja {
+  top: 28px;
+}
+
+.peru-chef.feliz .boca {
+  bottom: 22px;
+  width: 28px;
+  height: 18px;
+  background: #111;
+  border-radius: 0 0 14px 14px;
+}
+
+.peru-chef.feliz .boca::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 14px;
+  height: 8px;
+  transform: translateX(-50%);
+  background: #ff9fbd;
+  border-radius: 8px 8px 0 0;
+}
+
+.peru-chef.feliz .rubor {
+  opacity: 1;
+}
+
+/* ESTADO MOLESTO */
+.peru-chef.molesto .ceja-izq {
+  transform: rotate(14deg);
+}
+
+.peru-chef.molesto .ceja-der {
+  transform: rotate(-14deg);
+}
+
+.peru-chef.molesto .boca {
+  bottom: 18px;
+  width: 22px;
+  height: 14px;
+  border: 4px solid #111;
+  border-bottom: none;
+  border-radius: 12px 12px 0 0;
+  background: transparent;
+}
+
+/* Textos overlay */
+#snake-mensaje {
+  margin: 0;
+  color: #fff;
+}
+
+#snake-detalle {
+  margin: 0;
+  color: #fff;
+  max-width: 250px;
+  line-height: 1.45;
+}
+
+/* Botón */
+#snake-iniciar {
+  background: #ffd8e3;
+  color: #cf3657;
+  border: 2px solid #ffffff;
+  border-radius: 18px;
+  padding: 12px 24px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 0 #e7a9bc;
+}
+
+#snake-iniciar:hover {
+  background: #ffc6d4;
+}
+
+#snake-iniciar:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #e7a9bc;
+}
+
+@media (max-width: 480px) {
+  .peru-chef {
+    width: 96px;
+    height: 114px;
+  }
+
+  .peru-face {
+    width: 82px;
+    height: 82px;
+  }
+
+  .peru-face .ojo {
+    top: 34px;
+    width: 11px;
+    height: 16px;
+  }
+
+  .peru-face .ojo-izq {
+    left: 22px;
+  }
+  .peru-face .ojo-der {
+    right: 22px;
+  }
+
+  .peru-face .ceja {
+    top: 24px;
+    width: 16px;
+  }
+
+  #snake-detalle {
+    max-width: 220px;
+    font-size: 13px;
+  }
+}
+/* Sprite de Perú */
+.snake-overlay-personaje {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.snake-overlay-personaje.hidden {
+  display: none;
+}
+
+.peru-sprite {
+  display: block;
+  width: 125px;
+  max-width: 45%;
+  height: auto;
+
+  /* Mantener píxeles definidos */
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+#snake-mensaje {
+  max-width: 280px;
+  margin: 0;
+  text-align: center;
+  line-height: 1.4;
+}
+
+@media (max-width: 480px) {
+  .peru-sprite {
+    width: 105px;
+  }
+
+  #snake-mensaje {
+    font-size: 17px;
+  }
+}
