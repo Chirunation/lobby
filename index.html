@@ -1,185 +1,300 @@
 <!doctype html>
 <html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Chirunation ♡ Perú × Chile</title>
-<meta name="description" content="Chirunation: celebrando los lazos entre Perú y Chile. Concursos, el MAP Chirú, la playlist y las historias que nos unen.">
-<meta property="og:title" content="Chirunation ♡">
-<meta property="og:description" content="Celebrando los lazos entre Perú y Chile.">
-<meta property="og:image" content="assets/img/chiru-playa.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21 4.5 13.6A4.8 4.8 0 0 1 12 7.4a4.8 4.8 0 0 1 7.5 6.2z' fill='%23ff5c74'/%3E%3C/svg%3E">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&amp;family=Fredoka:wght@500;600;700&amp;family=Nunito:wght@500;700;800&amp;display=swap">
-<link rel="stylesheet" href="css/estilos.css">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chirunation ♡ Perú × Chile</title>
+    <meta name="description" content="Chirunation: celebrando los lazos entre Perú y Chile. Concursos, el MAP Chirú, la playlist y las historias que nos unen.">
+    <meta property="og:title" content="Chirunation ♡">
+    <meta property="og:description" content="Celebrando los lazos entre Perú y Chile.">
+    <meta property="og:image" content="assets/img/chiru-playa.jpg">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21 4.5 13.6A4.8 4.8 0 0 1 12 7.4a4.8 4.8 0 0 1 7.5 6.2z' fill='%23ff5c74'/%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&amp;family=Fredoka:wght@500;600;700&amp;family=Nunito:wght@500;700;800&amp;display=swap">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/mini-game.css">
+  </head>
+  <body>
 
-<div class="franja" aria-hidden="true"><i class="pe"></i><i class="bl"></i><i class="pe"></i><i class="cl-a"></i><i class="bl"></i><i class="cl-r"></i></div>
+    <div class="franja" aria-hidden="true"><i class="pe"></i><i class="bl"></i><i class="pe"></i><i class="cl-a"></i><i class="bl"></i><i class="cl-r"></i></div>
 
-<header class="barra">
-  <div class="banderas" role="img" aria-label="Bandera de Perú y bandera de Chile">
-    <svg width="34" height="24" viewBox="0 0 36 24" aria-hidden="true"><rect width="12" height="24" fill="#D91023"/><rect x="12" width="12" height="24" fill="#fff"/><rect x="24" width="12" height="24" fill="#D91023"/></svg>
-    <svg class="latido" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21 4.5 13.6A4.8 4.8 0 0 1 12 7.4a4.8 4.8 0 0 1 7.5 6.2z" fill="#ff5c74"/></svg>
-    <svg width="34" height="24" viewBox="0 0 36 24" aria-hidden="true"><rect width="36" height="12" fill="#fff"/><rect y="12" width="36" height="12" fill="#D52B1E"/><rect width="12" height="12" fill="#0039A6"/><polygon points="6,2.2 7.2,5.4 10.6,5.5 7.9,7.6 8.9,10.8 6,8.9 3.1,10.8 4.1,7.6 1.4,5.5 4.8,5.4" fill="#fff"/></svg>
-  </div>
-  <div class="cinta"><span class="cinta-texto" id="cinta"></span></div>
-  <div id="boton-barra"></div>
-</header>
+    <header class="barra">
+      <div class="banderas" role="img" aria-label="Bandera de Perú y bandera de Chile">
+        <svg width="34" height="24" viewBox="0 0 36 24" aria-hidden="true"><rect width="12" height="24" fill="#D91023"/><rect x="12" width="12" height="24" fill="#fff"/><rect x="24" width="12" height="24" fill="#D91023"/></svg>
+        <svg class="latido" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21 4.5 13.6A4.8 4.8 0 0 1 12 7.4a4.8 4.8 0 0 1 7.5 6.2z" fill="#ff5c74"/></svg>
+        <svg width="34" height="24" viewBox="0 0 36 24" aria-hidden="true"><rect width="36" height="12" fill="#fff"/><rect y="12" width="36" height="12" fill="#D52B1E"/><rect width="12" height="12" fill="#0039A6"/><polygon points="6,2.2 7.2,5.4 10.6,5.5 7.9,7.6 8.9,10.8 6,8.9 3.1,10.8 4.1,7.6 1.4,5.5 4.8,5.4" fill="#fff"/></svg>
+      </div>
+      <div class="cinta"><span class="cinta-texto" id="cinta"></span></div>
+      <div id="boton-barra"></div>
+    </header>
 
-<div class="layout">
+    <div class="layout">
 
-  <aside class="col col-izq" aria-label="Concursos, MAP y cita">
-    <section class="card" id="concursos"></section>
-    <section class="card" id="map"></section>
-    <figure class="cita" id="cita"></figure>
-  </aside>
+      <aside class="col col-izq" aria-label="Concursos, MAP y cita">
+        <section class="card" id="concursos"></section>
+        <section class="card" id="map"></section>
+        <figure class="cita" id="cita"></figure>
+      </aside>
 
-  <main class="centro">
-    <h1 class="sr-only" id="titulo-sr">Chirunation</h1>
-    <svg class="titulo" viewBox="0 0 600 200" aria-hidden="true">
-      <defs>
-        <path id="arcoArriba" d="M 20 270 A 290 250 0 0 1 580 270"/>
-        <path id="arcoGrande" d="M 70 290 A 240 205 0 0 1 530 290"/>
-      </defs>
-      <text class="t-sub"><textPath href="#arcoArriba" startOffset="50%" text-anchor="middle" id="t-sub"></textPath></text>
-      <text class="t-sombra" transform="translate(0,6)"><textPath href="#arcoGrande" startOffset="50%" text-anchor="middle" class="t-main"></textPath></text>
-      <text class="t-frente"><textPath href="#arcoGrande" startOffset="50%" text-anchor="middle" class="t-main"></textPath></text>
-      <path class="destello" d="M40 120 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4z"/>
-      <path class="destello d2" d="M556 110 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z"/>
-    </svg>
+      <main class="centro">
+        <h1 class="sr-only" id="titulo-sr">Chirunation</h1>
+        <svg class="titulo" viewBox="0 0 600 200" aria-hidden="true">
+          <defs>
+            <path id="arcoArriba" d="M 20 270 A 290 250 0 0 1 580 270"/>
+            <path id="arcoGrande" d="M 70 290 A 240 205 0 0 1 530 290"/>
+          </defs>
+          <text class="t-sub"><textPath href="#arcoArriba" startOffset="50%" text-anchor="middle" id="t-sub"></textPath></text>
+          <text class="t-sombra" transform="translate(0,6)"><textPath href="#arcoGrande" startOffset="50%" text-anchor="middle" class="t-main"></textPath></text>
+          <text class="t-frente"><textPath href="#arcoGrande" startOffset="50%" text-anchor="middle" class="t-main"></textPath></text>
+          <path class="destello" d="M40 120 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4z"/>
+          <path class="destello d2" d="M556 110 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z"/>
+        </svg>
 
-    <div class="mundo">
-      <div id="burbujas"></div>
-      <svg class="globo" viewBox="0 0 500 500" role="img" aria-label="Mapa ilustrado del Pacífico: un barquito con un corazón navega de Lima a Santiago junto a la costa de Perú y Chile">
-        <defs>
-          <radialGradient id="oc" cx="35%" cy="30%" r="78%"><stop offset="0" stop-color="#c4ecff"/><stop offset=".48" stop-color="#5aa8e8"/><stop offset="1" stop-color="#2a3f8f"/></radialGradient>
-          <radialGradient id="rim" cx="50%" cy="50%" r="50%"><stop offset=".75" stop-color="#2a3f8f" stop-opacity="0"/><stop offset="1" stop-color="#2a3f8f" stop-opacity=".5"/></radialGradient>
-          <clipPath id="clipGlobo"><circle cx="250" cy="250" r="230"/></clipPath>
-        </defs>
-        <circle cx="250" cy="250" r="242" fill="#ffffff" fill-opacity=".18"/>
-        <circle cx="250" cy="250" r="230" fill="url(#oc)" stroke="#ffffff" stroke-width="6"/>
-        <g clip-path="url(#clipGlobo)">
-          <g fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3" stroke-linecap="round">
-            <path d="M70 170 q10 -9 20 0 t20 0"/><path d="M120 115 q10 -9 20 0 t20 0"/><path d="M60 300 q10 -9 20 0 t20 0"/><path d="M150 385 q10 -9 20 0 t20 0"/><path d="M205 195 q10 -9 20 0 t20 0"/><path d="M240 435 q10 -9 20 0 t20 0"/><path d="M110 240 q10 -9 20 0 t20 0"/>
-          </g>
-          <g fill="#ffffff" fill-opacity=".55"><circle cx="90" cy="360" r="5"/><circle cx="102" cy="346" r="3"/><circle cx="200" cy="150" r="4"/><circle cx="170" cy="460" r="4"/></g>
-          <path d="M370 0 L362 70 L384 140 L425 200 L500 215 L500 0 Z" fill="#9fd49a"/>
-          <path d="M335 0 C 322 40, 300 90, 300 112 C 300 140, 330 185, 345 212 C 362 240, 388 270, 396 296 C 400 320, 388 360, 390 400 C 392 440, 398 470, 402 500 L500 500 L500 215 L425 200 L384 140 L362 70 L370 0 Z" fill="#f6d39c"/>
-          <path d="M362 0 C 352 40, 334 90, 334 112 C 336 140, 362 180, 378 208 C 398 240, 418 268, 422 300 C 426 340, 418 380, 422 420 C 424 450, 428 480, 430 500" fill="none" stroke="#d8a77c" stroke-width="16" stroke-linecap="round"/>
-          <g fill="#ffffff"><circle cx="350" cy="60" r="5"/><circle cx="352" cy="160" r="5"/><circle cx="400" cy="240" r="5"/><circle cx="423" cy="330" r="5"/><circle cx="420" cy="400" r="6"/><circle cx="426" cy="455" r="5"/></g>
-          <circle cx="250" cy="250" r="230" fill="url(#rim)"/>
-        </g>
-        <g transform="translate(110 118)" opacity=".85">
-          <circle r="22" fill="#ffffff" fill-opacity=".25"/>
-          <polygon points="0,-20 4,-4 20,0 4,4 0,20 -4,4 -20,0 -4,-4" fill="#ffffff" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/>
-          <polygon points="0,-20 4,-4 0,0" fill="#ff5c74"/>
-        </g>
-        <path d="M342 212 C 240 236, 240 364, 389 390" fill="none" stroke="#ffffff" stroke-width="4" stroke-dasharray="2 12" stroke-linecap="round"/>
-        <g transform="translate(342 212)"><circle r="13" fill="#ff5c74" stroke="#fff" stroke-width="4"/><circle r="4" fill="#fff"/></g>
-        <g transform="translate(389 390)"><circle r="13" fill="#4f7dff" stroke="#fff" stroke-width="4"/><circle r="4" fill="#fff"/></g>
-        <g transform="translate(250 196)"><rect x="-6" y="-20" width="76" height="30" rx="15" fill="#fff8ef"/><text x="32" y="1" text-anchor="middle" class="g-label lima">Lima</text></g>
-        <g transform="translate(270 418)"><rect x="-8" y="-20" width="110" height="30" rx="15" fill="#fff8ef"/><text x="47" y="1" text-anchor="middle" class="g-label stgo">Santiago</text></g>
-        <g transform="translate(276 300)">
-          <g class="balanceo">
-            <path d="M-26 4 Q0 10 26 4 Q20 20 0 20 Q-20 20 -26 4 Z" fill="#ffffff" stroke="#2a3f8f" stroke-width="3" stroke-linejoin="round"/>
-            <line x1="0" y1="6" x2="0" y2="-34" stroke="#2a3f8f" stroke-width="3" stroke-linecap="round"/>
-            <path d="M-3 -32 Q-14 -14 -3 0 L-22 0 Q-16 -18 -3 -32 Z" fill="#ff8fa2" stroke="#2a3f8f" stroke-width="2.5" stroke-linejoin="round"/>
-            <path d="M3 -34 Q16 -16 3 0 L23 0 Q18 -18 3 -34 Z" fill="#8fb2ff" stroke="#2a3f8f" stroke-width="2.5" stroke-linejoin="round"/>
-            <path class="latido" d="M0 -42 C -3 -47, -14 -48, -14 -57 C -14 -64, -5 -66, 0 -60 C 5 -66, 14 -64, 14 -57 C 14 -48, 3 -47, 0 -42 Z" fill="#ff5c74" stroke="#ffffff" stroke-width="3" stroke-linejoin="round"/>
-          </g>
-        </g>
-      </svg>
+        <div class="mundo">
+          <div id="burbujas"></div>
+          <svg class="globo" viewBox="0 0 500 500" role="img" aria-label="Mapa ilustrado del Pacífico: un barquito con un corazón navega de Lima a Santiago junto a la costa de Perú y Chile">
+            <defs>
+              <radialGradient id="oc" cx="35%" cy="30%" r="78%"><stop offset="0" stop-color="#c4ecff"/><stop offset=".48" stop-color="#5aa8e8"/><stop offset="1" stop-color="#2a3f8f"/></radialGradient>
+              <radialGradient id="rim" cx="50%" cy="50%" r="50%"><stop offset=".75" stop-color="#2a3f8f" stop-opacity="0"/><stop offset="1" stop-color="#2a3f8f" stop-opacity=".5"/></radialGradient>
+              <clipPath id="clipGlobo"><circle cx="250" cy="250" r="230"/></clipPath>
+            </defs>
+            <circle cx="250" cy="250" r="242" fill="#ffffff" fill-opacity=".18"/>
+            <circle cx="250" cy="250" r="230" fill="url(#oc)" stroke="#ffffff" stroke-width="6"/>
+            <g clip-path="url(#clipGlobo)">
+              <g fill="none" stroke="#ffffff" stroke-opacity=".7" stroke-width="3" stroke-linecap="round">
+                <path d="M70 170 q10 -9 20 0 t20 0"/><path d="M120 115 q10 -9 20 0 t20 0"/><path d="M60 300 q10 -9 20 0 t20 0"/><path d="M150 385 q10 -9 20 0 t20 0"/><path d="M205 195 q10 -9 20 0 t20 0"/><path d="M240 435 q10 -9 20 0 t20 0"/><path d="M110 240 q10 -9 20 0 t20 0"/>
+              </g>
+              <g fill="#ffffff" fill-opacity=".55"><circle cx="90" cy="360" r="5"/><circle cx="102" cy="346" r="3"/><circle cx="200" cy="150" r="4"/><circle cx="170" cy="460" r="4"/></g>
+              <path d="M370 0 L362 70 L384 140 L425 200 L500 215 L500 0 Z" fill="#9fd49a"/>
+              <path d="M335 0 C 322 40, 300 90, 300 112 C 300 140, 330 185, 345 212 C 362 240, 388 270, 396 296 C 400 320, 388 360, 390 400 C 392 440, 398 470, 402 500 L500 500 L500 215 L425 200 L384 140 L362 70 L370 0 Z" fill="#f6d39c"/>
+              <path d="M362 0 C 352 40, 334 90, 334 112 C 336 140, 362 180, 378 208 C 398 240, 418 268, 422 300 C 426 340, 418 380, 422 420 C 424 450, 428 480, 430 500" fill="none" stroke="#d8a77c" stroke-width="16" stroke-linecap="round"/>
+              <g fill="#ffffff"><circle cx="350" cy="60" r="5"/><circle cx="352" cy="160" r="5"/><circle cx="400" cy="240" r="5"/><circle cx="423" cy="330" r="5"/><circle cx="420" cy="400" r="6"/><circle cx="426" cy="455" r="5"/></g>
+              <circle cx="250" cy="250" r="230" fill="url(#rim)"/>
+            </g>
+            <g transform="translate(110 118)" opacity=".85">
+              <circle r="22" fill="#ffffff" fill-opacity=".25"/>
+              <polygon points="0,-20 4,-4 20,0 4,4 0,20 -4,4 -20,0 -4,-4" fill="#ffffff" stroke="#ffffff" stroke-width="2" stroke-linejoin="round"/>
+              <polygon points="0,-20 4,-4 0,0" fill="#ff5c74"/>
+            </g>
+            <path d="M342 212 C 240 236, 240 364, 389 390" fill="none" stroke="#ffffff" stroke-width="4" stroke-dasharray="2 12" stroke-linecap="round"/>
+            <g transform="translate(342 212)"><circle r="13" fill="#ff5c74" stroke="#fff" stroke-width="4"/><circle r="4" fill="#fff"/></g>
+            <g transform="translate(389 390)"><circle r="13" fill="#4f7dff" stroke="#fff" stroke-width="4"/><circle r="4" fill="#fff"/></g>
+            <g transform="translate(250 196)"><rect x="-6" y="-20" width="76" height="30" rx="15" fill="#fff8ef"/><text x="32" y="1" text-anchor="middle" class="g-label lima">Lima</text></g>
+            <g transform="translate(270 418)"><rect x="-8" y="-20" width="110" height="30" rx="15" fill="#fff8ef"/><text x="47" y="1" text-anchor="middle" class="g-label stgo">Santiago</text></g>
+            <g transform="translate(276 300)">
+              <g class="balanceo">
+                <path d="M-26 4 Q0 10 26 4 Q20 20 0 20 Q-20 20 -26 4 Z" fill="#ffffff" stroke="#2a3f8f" stroke-width="3" stroke-linejoin="round"/>
+                <line x1="0" y1="6" x2="0" y2="-34" stroke="#2a3f8f" stroke-width="3" stroke-linecap="round"/>
+                <path d="M-3 -32 Q-14 -14 -3 0 L-22 0 Q-16 -18 -3 -32 Z" fill="#ff8fa2" stroke="#2a3f8f" stroke-width="2.5" stroke-linejoin="round"/>
+                <path d="M3 -34 Q16 -16 3 0 L23 0 Q18 -18 3 -34 Z" fill="#8fb2ff" stroke="#2a3f8f" stroke-width="2.5" stroke-linejoin="round"/>
+                <path class="latido" d="M0 -42 C -3 -47, -14 -48, -14 -57 C -14 -64, -5 -66, 0 -60 C 5 -66, 14 -64, 14 -57 C 14 -48, 3 -47, 0 -42 Z" fill="#ff5c74" stroke="#ffffff" stroke-width="3" stroke-linejoin="round"/>
+              </g>
+            </g>
+          </svg>
+        </div>
+
+        <!-- CONTENEDOR GENERAL DE MINIJUEGOS -->
+        <div class="game-wrapper">
+          <div class="game-viewport">
+            <div class="game-container">
+              <!-- ========== JUEGO 1 ========== -->
+              <section class="card juego game-item" aria-labelledby="juego-titulo">
+                <div class="juego-cabecera">
+                  <h2 id="juego-titulo"></h2>
+                  <button type="button" class="btn-mini" id="juego-reiniciar" aria-label="Reiniciar el juego">
+                    Reiniciar
+                  </button>
+                </div>
+                <p class="juego-instrucciones" id="juego-instrucciones"></p>
+                <!-- Escenario ORIGINAL del primer juego -->
+                <div class="escenario" id="escenario">
+                  <div class="mesa" aria-hidden="true">
+                    <div class="mesa-tabla">
+                      <span id="item-nombre"></span>
+                    </div>
+                    <i class="pata p1"></i>
+                    <i class="pata p2"></i>
+                  </div>
+                  <button type="button" class="flecha izq" id="item-ant" aria-label="Objeto anterior">
+                    ‹
+                  </button>
+                  <button type="button" class="flecha der" id="item-sig" aria-label="Objeto siguiente">
+                    ›
+                  </button>
+                </div>
+                <p class="sr-only" id="juego-estado" aria-live="polite"></p>
+              </section>
+              <!-- ========== JUEGO 2 ========== -->
+              <!-- ========== JUEGO 2: CHILE THE SNAKE ========== -->
+              <section class="card juego2 game-item" aria-labelledby="juego2-titulo">
+
+                <div class="snake-header">
+                  <h2 id="juego2-titulo">Chile the Snake</h2>
+                  <button type="button" class="btn-mini" id="snake-reiniciar">
+                    Reiniciar
+                  </button>
+                </div>
+
+                <p class="snake-instrucciones">
+                  Perú le cocinó a Chile 8 causitas, ¡pero se le escaparon! Ayuda a Chile a recogerlas todas antes de que se Perú se de cuenta.
+                </p>
+
+                <!-- MARCADORES -->
+                <div class="snake-stats">
+                  <div class="snake-stat">
+                    <span>🍽️ Causitas</span>
+                    <strong id="snake-score">0 / 8</strong>
+                  </div>
+
+                  <div class="snake-stat">
+                    <span>⏱️ Tiempo</span>
+                    <strong id="snake-tiempo">45s</strong>
+                  </div>
+                </div>
+
+                <!-- TABLERO -->
+                <div class="snake-area">
+                  <canvas
+                    id="snake-canvas"
+                    width="320"
+                    height="320"
+                    aria-label="Tablero de Chile the Snake"
+                  >
+                  </canvas>
+
+                  <!-- Pantalla inicial y resultado -->
+                  <div class="snake-overlay" id="snake-overlay">
+
+                    <!-- SPRITE DE PERÚ -->
+                    <div class="snake-overlay-personaje hidden" id="snake-overlay-personaje">
+                      <img
+                        id="peru-sprite"
+                        class="peru-sprite"
+                        src="assets/img/peru-chef-feliz.png"
+                        alt="Perú vestido de chef"
+                      >
+                    </div>
+
+                    <!-- Mensaje de Perú -->
+                    <h3 id="snake-mensaje">¿Listo para jugar?</h3>
+
+                    <p id="snake-detalle">¡Consigue las 8 causitas!</p>
+
+                    <button type="button" id="snake-iniciar">
+                      ¡Jugar!
+                    </button>
+
+                  </div>
+                </div>
+
+                <!-- Cruceta para pantallas táctiles -->
+                <div class="snake-controls" role="group" aria-label="Controles de Chile the Snake">
+                  <button type="button" class="snake-control up" data-direction="up" aria-label="Mover arriba">▲</button>
+                  <button type="button" class="snake-control left" data-direction="left" aria-label="Mover a la izquierda">◀</button>
+                  <button type="button" class="snake-control down" data-direction="down" aria-label="Mover abajo">▼</button>
+                  <button type="button" class="snake-control right" data-direction="right" aria-label="Mover a la derecha">▶</button>
+                </div>
+
+                <p class="snake-ayuda">
+                  Usa las flechas del teclado, WASD o los botones para moverte.
+                </p>
+
+              </section>
+              <!-- ========== JUEGO 3 ========== -->
+              <section class="card juego3 game-item">
+                <h2>Tercer minijuego</h2>
+                <p>Próximamente...</p>
+              </section>
+            </div>
+          </div>
+  
+          <!-- NAVEGACIÓN ENTRE MINIJUEGOS -->
+          <nav class="game-navigation" aria-label="Navegación entre minijuegos">
+            <button type="button" class="nav-game-button prev-button" aria-label="Minijuego anterior">
+              <span class="nav-game-icon" aria-hidden="true">‹</span>
+              <span class="nav-game-label">Anterior</span>
+            </button>
+            <span id="game-counter" aria-live="polite">1 / 3</span>
+            <button type="button" class="nav-game-button next-button" aria-label="Siguiente minijuego">
+              <span class="nav-game-label">Siguiente</span>
+              <span class="nav-game-icon" aria-hidden="true">›</span>
+            </button>
+          </nav>
+        </div>
+      </main>
+
+      <aside class="col col-der" aria-label="Enlaces y lo último">
+        <div class="card pase">
+          <div class="pase-ruta">
+            <div class="pase-mitad pe"><small>DESDE</small><b>LIM</b><span>Lima, Perú</span></div>
+            <div class="pase-mitad cl"><small>HACIA</small><b>SCL</b><span>Santiago, Chile</span></div>
+          </div>
+          <div class="pase-info"><span>PASE A BORDO ♡</span><span>ASIENTO 1A · VISTA AL MAR</span></div>
+          <div class="pase-cuerpo">
+            <h2>Enlaces</h2>
+            <nav aria-label="Redes y enlaces" id="enlaces"></nav>
+          </div>
+          <div class="codigo-barras" aria-hidden="true"></div>
+        </div>
+        <section class="card" id="ultimo" aria-labelledby="ultimo-titulo"></section>
+      </aside>
     </div>
 
-    <section class="card juego" aria-labelledby="juego-titulo">
-      <div class="juego-cabecera">
-        <h2 id="juego-titulo"></h2>
-        <button type="button" class="btn-mini" id="juego-reiniciar" aria-label="Reiniciar el juego">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
-          Reiniciar
-        </button>
+    <section class="abajo" aria-labelledby="abajo-titulo">
+      <h2 id="abajo-titulo" class="titulo-seccion"></h2>
+      <div class="abajo-fila">
+        <div class="card libro" id="libro"></div>
+        <figure class="polaroid" id="foto"></figure>
+        <section class="card playlist" id="playlist"></section>
       </div>
-      <p class="juego-instrucciones" id="juego-instrucciones"></p>
-      <div class="escenario" id="escenario">
-        <div class="mesa" aria-hidden="true"><div class="mesa-tabla"><span id="item-nombre"></span></div><i class="pata p1"></i><i class="pata p2"></i></div>
-        <button type="button" class="flecha izq" id="item-ant" aria-label="Objeto anterior">‹</button>
-        <button type="button" class="flecha der" id="item-sig" aria-label="Objeto siguiente">›</button>
-      </div>
-      <p class="sr-only" id="juego-estado" aria-live="polite"></p>
     </section>
-  </main>
 
-  <aside class="col col-der" aria-label="Enlaces y lo último">
-    <div class="card pase">
-      <div class="pase-ruta">
-        <div class="pase-mitad pe"><small>DESDE</small><b>LIM</b><span>Lima, Perú</span></div>
-        <div class="pase-mitad cl"><small>HACIA</small><b>SCL</b><span>Santiago, Chile</span></div>
-      </div>
-      <div class="pase-info"><span>PASE A BORDO ♡</span><span>ASIENTO 1A · VISTA AL MAR</span></div>
-      <div class="pase-cuerpo">
-        <h2>Enlaces</h2>
-        <nav aria-label="Redes y enlaces" id="enlaces"></nav>
-      </div>
-      <div class="codigo-barras" aria-hidden="true"></div>
-    </div>
-    <section class="card" id="ultimo" aria-labelledby="ultimo-titulo"></section>
-  </aside>
-</div>
+    <svg class="costa" viewBox="0 0 1440 300" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <path d="M840 245 Q890 190 930 150 Q960 170 985 190 Q1020 130 1060 88 Q1090 125 1120 160 Q1150 110 1185 66 Q1218 110 1250 150 Q1280 118 1310 92 Q1345 128 1380 160 Q1410 136 1440 118 L1440 300 L840 300 Z" fill="#8e9ccc"/>
+      <g fill="#ffffff"><path d="M1046 108 Q1060 86 1074 110 Q1066 106 1060 114 Q1054 106 1046 108 Z"/><path d="M1170 88 Q1185 64 1200 90 Q1192 86 1185 94 Q1178 86 1170 88 Z"/><path d="M1297 110 Q1310 90 1323 112 Q1316 108 1310 115 Q1304 108 1297 110 Z"/></g>
+      <g fill="#5b6aa8"><rect x="1010" y="212" width="34" height="88" rx="6"/><rect x="1050" y="196" width="28" height="104" rx="6"/><rect x="1084" y="220" width="40" height="80" rx="6"/><rect x="1176" y="204" width="36" height="96" rx="6"/><rect x="1218" y="224" width="44" height="76" rx="6"/><rect x="1268" y="210" width="30" height="90" rx="6"/><path d="M1136 300 L1142 124 Q1153 112 1164 124 L1170 300 Z"/><rect x="1151" y="98" width="4" height="20" rx="2"/></g>
+      <g fill="#ffe7a8"><rect x="1018" y="224" width="6" height="6" rx="2"/><rect x="1030" y="242" width="6" height="6" rx="2"/><rect x="1058" y="210" width="6" height="6" rx="2"/><rect x="1094" y="236" width="6" height="6" rx="2"/><rect x="1147" y="146" width="12" height="4" rx="2"/><rect x="1147" y="176" width="12" height="4" rx="2"/><rect x="1147" y="206" width="12" height="4" rx="2"/><rect x="1186" y="218" width="6" height="6" rx="2"/><rect x="1230" y="238" width="6" height="6" rx="2"/></g>
+      <path d="M430 300 Q560 196 700 246 T990 236 L990 300 Z" fill="#f6d39c"/>
+      <path d="M520 300 Q650 232 780 262 T1000 270 L1000 300 Z" fill="#ebb97e"/>
+      <g fill="#7fbf78"><rect x="640" y="212" width="10" height="44" rx="5"/><rect x="626" y="222" width="8" height="20" rx="4"/><rect x="656" y="218" width="8" height="18" rx="4"/><rect x="626" y="236" width="16" height="6" rx="3"/><rect x="648" y="230" width="16" height="6" rx="3"/></g>
+      <circle cx="645" cy="210" r="4" fill="#ff8fa2"/>
+      <g fill="#e3ecfa"><rect x="40" y="118" width="26" height="40" rx="5"/><rect x="72" y="104" width="22" height="54" rx="5"/><rect x="250" y="112" width="30" height="46" rx="5"/><rect x="290" y="124" width="22" height="34" rx="5"/><rect x="330" y="116" width="26" height="48" rx="5"/></g>
+      <path d="M0 160 Q70 148 150 160 Q230 146 310 164 Q360 170 390 174 Q440 230 470 300 L0 300 Z" fill="#d8a77c"/>
+      <path d="M0 160 Q70 148 150 160 Q230 146 310 164 Q360 170 390 174 L396 184 Q350 178 310 175 Q230 158 150 171 Q70 160 0 171 Z" fill="#9fd49a"/>
+      <g><rect x="176" y="100" width="16" height="54" rx="4" fill="#ffffff"/><rect x="176" y="112" width="16" height="9" fill="#ff8fa2"/><rect x="176" y="132" width="16" height="9" fill="#ff8fa2"/><path d="M170 100 Q184 84 198 100 Z" fill="#24305e"/><circle cx="184" cy="92" r="4" fill="#ffe7a8"/></g>
+      <g fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round"><path d="M300 58 Q330 38 360 58"/><path d="M302 58 L328 86 M358 58 L332 86"/></g>
+      <circle cx="330" cy="90" r="5" fill="#ff8fa2"/>
+      <rect x="0" y="244" width="1440" height="56" fill="#5aa8e8"/>
+      <path d="M0 252 Q30 238 60 252 T120 252 T180 252 T240 252 T300 252 T360 252 T420 252 T480 252 T540 252 T600 252 T660 252 T720 252 T780 252 T840 252 T900 252 T960 252 T1020 252 T1080 252 T1140 252 T1200 252 T1260 252 T1320 252 T1380 252 T1440 252 L1440 300 L0 300 Z" fill="#4f9ae0"/>
+      <path d="M0 274 Q45 262 90 274 T180 274 T270 274 T360 274 T450 274 T540 274 T630 274 T720 274 T810 274 T900 274 T990 274 T1080 274 T1170 274 T1260 274 T1350 274 T1440 274 L1440 300 L0 300 Z" fill="#3d7fcf"/>
+      <g fill="none" stroke="#ffffff" stroke-opacity=".85" stroke-width="2.5" stroke-linecap="round"><path d="M200 262 q8 -6 16 0"/><path d="M520 266 q8 -6 16 0"/><path d="M880 260 q8 -6 16 0"/><path d="M1240 264 q8 -6 16 0"/></g>
+    </svg>
+    <footer class="pie" id="pie"></footer>
 
-<section class="abajo" aria-labelledby="abajo-titulo">
-  <h2 id="abajo-titulo" class="titulo-seccion"></h2>
-  <div class="abajo-fila">
-    <div class="card libro" id="libro"></div>
-    <figure class="polaroid" id="foto"></figure>
-    <section class="card playlist" id="playlist"></section>
-  </div>
-</section>
+    <dialog class="ventana" id="ventana-calendario" aria-labelledby="cal-titulo">
+      <button type="button" class="cerrar" data-cerrar aria-label="Cerrar">×</button>
+      <h2 id="cal-titulo">Calendario Chirú</h2>
+      <p class="ventana-sub">Fechas importantes del año para la ship ♡</p>
+      <ol class="fechas" id="fechas"></ol>
+    </dialog>
 
-<svg class="costa" viewBox="0 0 1440 300" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-  <path d="M840 245 Q890 190 930 150 Q960 170 985 190 Q1020 130 1060 88 Q1090 125 1120 160 Q1150 110 1185 66 Q1218 110 1250 150 Q1280 118 1310 92 Q1345 128 1380 160 Q1410 136 1440 118 L1440 300 L840 300 Z" fill="#8e9ccc"/>
-  <g fill="#ffffff"><path d="M1046 108 Q1060 86 1074 110 Q1066 106 1060 114 Q1054 106 1046 108 Z"/><path d="M1170 88 Q1185 64 1200 90 Q1192 86 1185 94 Q1178 86 1170 88 Z"/><path d="M1297 110 Q1310 90 1323 112 Q1316 108 1310 115 Q1304 108 1297 110 Z"/></g>
-  <g fill="#5b6aa8"><rect x="1010" y="212" width="34" height="88" rx="6"/><rect x="1050" y="196" width="28" height="104" rx="6"/><rect x="1084" y="220" width="40" height="80" rx="6"/><rect x="1176" y="204" width="36" height="96" rx="6"/><rect x="1218" y="224" width="44" height="76" rx="6"/><rect x="1268" y="210" width="30" height="90" rx="6"/><path d="M1136 300 L1142 124 Q1153 112 1164 124 L1170 300 Z"/><rect x="1151" y="98" width="4" height="20" rx="2"/></g>
-  <g fill="#ffe7a8"><rect x="1018" y="224" width="6" height="6" rx="2"/><rect x="1030" y="242" width="6" height="6" rx="2"/><rect x="1058" y="210" width="6" height="6" rx="2"/><rect x="1094" y="236" width="6" height="6" rx="2"/><rect x="1147" y="146" width="12" height="4" rx="2"/><rect x="1147" y="176" width="12" height="4" rx="2"/><rect x="1147" y="206" width="12" height="4" rx="2"/><rect x="1186" y="218" width="6" height="6" rx="2"/><rect x="1230" y="238" width="6" height="6" rx="2"/></g>
-  <path d="M430 300 Q560 196 700 246 T990 236 L990 300 Z" fill="#f6d39c"/>
-  <path d="M520 300 Q650 232 780 262 T1000 270 L1000 300 Z" fill="#ebb97e"/>
-  <g fill="#7fbf78"><rect x="640" y="212" width="10" height="44" rx="5"/><rect x="626" y="222" width="8" height="20" rx="4"/><rect x="656" y="218" width="8" height="18" rx="4"/><rect x="626" y="236" width="16" height="6" rx="3"/><rect x="648" y="230" width="16" height="6" rx="3"/></g>
-  <circle cx="645" cy="210" r="4" fill="#ff8fa2"/>
-  <g fill="#e3ecfa"><rect x="40" y="118" width="26" height="40" rx="5"/><rect x="72" y="104" width="22" height="54" rx="5"/><rect x="250" y="112" width="30" height="46" rx="5"/><rect x="290" y="124" width="22" height="34" rx="5"/><rect x="330" y="116" width="26" height="48" rx="5"/></g>
-  <path d="M0 160 Q70 148 150 160 Q230 146 310 164 Q360 170 390 174 Q440 230 470 300 L0 300 Z" fill="#d8a77c"/>
-  <path d="M0 160 Q70 148 150 160 Q230 146 310 164 Q360 170 390 174 L396 184 Q350 178 310 175 Q230 158 150 171 Q70 160 0 171 Z" fill="#9fd49a"/>
-  <g><rect x="176" y="100" width="16" height="54" rx="4" fill="#ffffff"/><rect x="176" y="112" width="16" height="9" fill="#ff8fa2"/><rect x="176" y="132" width="16" height="9" fill="#ff8fa2"/><path d="M170 100 Q184 84 198 100 Z" fill="#24305e"/><circle cx="184" cy="92" r="4" fill="#ffe7a8"/></g>
-  <g fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round"><path d="M300 58 Q330 38 360 58"/><path d="M302 58 L328 86 M358 58 L332 86"/></g>
-  <circle cx="330" cy="90" r="5" fill="#ff8fa2"/>
-  <rect x="0" y="244" width="1440" height="56" fill="#5aa8e8"/>
-  <path d="M0 252 Q30 238 60 252 T120 252 T180 252 T240 252 T300 252 T360 252 T420 252 T480 252 T540 252 T600 252 T660 252 T720 252 T780 252 T840 252 T900 252 T960 252 T1020 252 T1080 252 T1140 252 T1200 252 T1260 252 T1320 252 T1380 252 T1440 252 L1440 300 L0 300 Z" fill="#4f9ae0"/>
-  <path d="M0 274 Q45 262 90 274 T180 274 T270 274 T360 274 T450 274 T540 274 T630 274 T720 274 T810 274 T900 274 T990 274 T1080 274 T1170 274 T1260 274 T1350 274 T1440 274 L1440 300 L0 300 Z" fill="#3d7fcf"/>
-  <g fill="none" stroke="#ffffff" stroke-opacity=".85" stroke-width="2.5" stroke-linecap="round"><path d="M200 262 q8 -6 16 0"/><path d="M520 266 q8 -6 16 0"/><path d="M880 260 q8 -6 16 0"/><path d="M1240 264 q8 -6 16 0"/></g>
-</svg>
-<footer class="pie" id="pie"></footer>
+    <dialog class="ventana" id="ventana-chiru" aria-labelledby="chiru-titulo">
+      <button type="button" class="cerrar" data-cerrar aria-label="Cerrar">×</button>
+      <div id="chiru-contenido"></div>
+    </dialog>
 
-<dialog class="ventana" id="ventana-calendario" aria-labelledby="cal-titulo">
-  <button type="button" class="cerrar" data-cerrar aria-label="Cerrar">×</button>
-  <h2 id="cal-titulo">Calendario Chirú</h2>
-  <p class="ventana-sub">Fechas importantes del año para la ship ♡</p>
-  <ol class="fechas" id="fechas"></ol>
-</dialog>
+    <dialog class="ventana" id="ventana-proyectos" aria-labelledby="proy-titulo">
+      <button type="button" class="cerrar" data-cerrar aria-label="Cerrar">×</button>
+      <h2 id="proy-titulo">Proyectos Chirú</h2>
+      <p class="ventana-sub">Lo que hemos creado juntxs ♡</p>
+      <ul class="fechas" id="lista-proyectos"></ul>
+    </dialog>
 
-<dialog class="ventana" id="ventana-chiru" aria-labelledby="chiru-titulo">
-  <button type="button" class="cerrar" data-cerrar aria-label="Cerrar">×</button>
-  <div id="chiru-contenido"></div>
-</dialog>
+    <script src="js/contenido.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/juego.js"></script>
+    <script src="js/snake.js" defer></script>
 
-<dialog class="ventana" id="ventana-proyectos" aria-labelledby="proy-titulo">
-  <button type="button" class="cerrar" data-cerrar aria-label="Cerrar">×</button>
-  <h2 id="proy-titulo">Proyectos Chirú</h2>
-  <p class="ventana-sub">Lo que hemos creado juntxs ♡</p>
-  <ul class="fechas" id="lista-proyectos"></ul>
-</dialog>
-
-<script src="js/contenido.js"></script>
-<script src="js/app.js"></script>
-<script src="js/juego.js"></script>
-</body>
+  </body>
 </html>
