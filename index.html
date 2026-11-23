@@ -16,14 +16,9 @@
     <link rel="stylesheet" href="css/mini-game.css">
   </head>
   <body>
-    <!--
-  ♡ ¿Quieres cambiar textos, links o avisos?  →  NO edites este archivo.
-    Abre  js/contenido.js  (todo el contenido está ahí). Instrucciones en README.md
--->
 
     <div class="franja" aria-hidden="true"><i class="pe"></i><i class="bl"></i><i class="pe"></i><i class="cl-a"></i><i class="bl"></i><i class="cl-r"></i></div>
 
-    <!-- ============ BARRA DE ARRIBA ============ -->
     <header class="barra">
       <div class="banderas" role="img" aria-label="Bandera de Perú y bandera de Chile">
         <svg width="34" height="24" viewBox="0 0 36 24" aria-hidden="true"><rect width="12" height="24" fill="#D91023"/><rect x="12" width="12" height="24" fill="#fff"/><rect x="24" width="12" height="24" fill="#D91023"/></svg>
@@ -34,17 +29,14 @@
       <div id="boton-barra"></div>
     </header>
 
-    <!-- ============ CUERPO PRINCIPAL ============ -->
     <div class="layout">
 
-      <!-- Columna izquierda: concursos, MAP, cita -->
       <aside class="col col-izq" aria-label="Concursos, MAP y cita">
         <section class="card" id="concursos"></section>
         <section class="card" id="map"></section>
         <figure class="cita" id="cita"></figure>
       </aside>
 
-      <!-- Centro: título, burbujas, planeta y juego -->
       <main class="centro">
         <h1 class="sr-only" id="titulo-sr">Chirunation</h1>
         <svg class="titulo" viewBox="0 0 600 200" aria-hidden="true">
@@ -232,7 +224,6 @@
         </div>
       </main>
 
-      <!-- Columna derecha: enlaces y lo último -->
       <aside class="col col-der" aria-label="Enlaces y lo último">
         <div class="card pase">
           <div class="pase-ruta">
@@ -250,7 +241,6 @@
       </aside>
     </div>
 
-    <!-- ============ ABAJO: LIBRO, FOTO, PLAYLIST ============ -->
     <section class="abajo" aria-labelledby="abajo-titulo">
       <h2 id="abajo-titulo" class="titulo-seccion"></h2>
       <div class="abajo-fila">
@@ -260,7 +250,6 @@
       </div>
     </section>
 
-    <!-- ============ PAISAJE Y PIE ============ -->
     <svg class="costa" viewBox="0 0 1440 300" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
       <path d="M840 245 Q890 190 930 150 Q960 170 985 190 Q1020 130 1060 88 Q1090 125 1120 160 Q1150 110 1185 66 Q1218 110 1250 150 Q1280 118 1310 92 Q1345 128 1380 160 Q1410 136 1440 118 L1440 300 L840 300 Z" fill="#8e9ccc"/>
       <g fill="#ffffff"><path d="M1046 108 Q1060 86 1074 110 Q1066 106 1060 114 Q1054 106 1046 108 Z"/><path d="M1170 88 Q1185 64 1200 90 Q1192 86 1185 94 Q1178 86 1170 88 Z"/><path d="M1297 110 Q1310 90 1323 112 Q1316 108 1310 115 Q1304 108 1297 110 Z"/></g>
@@ -283,7 +272,6 @@
     </svg>
     <footer class="pie" id="pie"></footer>
 
-    <!-- ============ VENTANITAS (se llenan desde contenido.js) ============ -->
     <dialog class="ventana" id="ventana-calendario" aria-labelledby="cal-titulo">
       <button type="button" class="cerrar" data-cerrar aria-label="Cerrar">×</button>
       <h2 id="cal-titulo">Calendario Chirú</h2>
@@ -307,5 +295,6 @@
     <script src="js/app.js"></script>
     <script src="js/juego.js"></script>
     <script src="js/snake.js" defer></script>
+
   </body>
 </html>
